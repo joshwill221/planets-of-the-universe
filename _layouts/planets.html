@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Planets
 ---
 
 <strong>Planets</strong>
@@ -8,8 +9,7 @@ layout: default
   <ul>
     {% for planet in site.data.planet-types %}
       <li>
-        <a href="{{site.baseurl}}/planets/{{planet.folder}}/" class="{% if page.url contains 'planet.folder' %}current{% endif %}">{{planet.title}}</a>
-        <p>{{ planet.folder }}</p>
+        <a href="{{site.baseurl}}/planets/{{planet.folder}}/" class="{% if page.url contains planet.folder %}current{% endif %}">{{planet.title}}</a>
       </li>
     {% endfor %}
   </ul>
